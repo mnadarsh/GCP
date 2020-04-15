@@ -35,27 +35,57 @@ If successful, the command returns:
 Creating gs://YOUR-BUCKET-NAME/...
 
 
-# Upload an object into your bucket
+## Upload an object into your bucket
 
-    **First, download this image to a temporary instance (ada.jpg) in Cloud Shell:**
+   **First, download this image to a temporary instance (ada.jpg) in Cloud Shell:**
       *code below*
       
         wget --output-document ada.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg
         
-    **Use the gsutil cp command to upload the image from the location where you saved it to the bucket you created:**
+   **Use the gsutil cp command to upload the image from the location where you saved it to the bucket you created:**
     
         gsutil cp ada.jpg gs://YOUR-BUCKET-NAME
         
-     **Now remove the downloaded image:**
+   **Now remove the downloaded image:**
         
         rm ada.jpg
         
     
 # Download an object from your bucket
 
-    **Use the gsutil cp command to download the image you stored in your bucket to Cloud Shell:**
+   **Use the gsutil cp command to download the image you stored in your bucket to Cloud Shell:**
     
           gsutil cp -r gs://YOUR-BUCKET-NAME/ada.jpg .
           
+   **Copy an object to a folder in the bucket**
+         
+           gsutil cp gs://YOUR-BUCKET-NAME/ada.jpg gs://YOUR-BUCKET-NAME/image-folder/
+           
+ # List contents of a bucket or folder
+ 
+   **Use the gsutil ls command to list the contents of the bucket:**
+   
+            gsutil ls gs://YOUR-BUCKET-NAME
+            
+   **List details for an object**
+   
+            gsutil ls -l gs://YOUR-BUCKET-NAME/ada.jpg
+   
+         
           
-
+ # Make your object publicly accessible
+   
+   **Use the gsutil acl ch command to grant all users read permission for the object stored in your bucket:**
+      
+            gsutil acl ch -u AllUsers:R gs://YOUR-BUCKET-NAME/ada.jpg
+            
+            
+   **Remove public access**
+ 
+            gsutil acl ch -d AllUsers gs://YOUR-BUCKET-NAME/ada.jpg
+            
+ # Delete objects
+      
+   **Use the gsutil rm command to delete an object - the image file in your bucket:**
+   
+            gsutil rm gs://YOUR-BUCKET-NAME/ada.jpg
