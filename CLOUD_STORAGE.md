@@ -1,6 +1,6 @@
 Google Cloud Storage allows world-wide storage and retrieval of any amount of data at any time. You can use Google Cloud Storage for a range of scenarios including serving website content, storing data for archival and disaster recovery, or distributing large data objects to users via direct download.
 
-#Steps to work on 
+# Steps to work on 
 
 Activate Google Cloud Shell
 Google Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud. Google Cloud Shell provides command-line access to your GCP resources.
@@ -11,10 +11,10 @@ In GCP console, on the top right toolbar, click the Open Cloud Shell button.
 
 gcloud auth list
 
-###gcloud config list project
+## gcloud config list project
 
 
-Create a bucket
+**Create a bucket**
 Run the gsutil mb command and replace with a unique name to create a bucket:
 
 gsutil mb gs://YOUR-BUCKET-NAME/
@@ -35,5 +35,27 @@ If successful, the command returns:
 Creating gs://YOUR-BUCKET-NAME/...
 
 
+# Upload an object into your bucket
 
+    **First, download this image to a temporary instance (ada.jpg) in Cloud Shell:**
+      *code below*
+      
+        wget --output-document ada.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg
+        
+    **Use the gsutil cp command to upload the image from the location where you saved it to the bucket you created:**
+    
+        gsutil cp ada.jpg gs://YOUR-BUCKET-NAME
+        
+     **Now remove the downloaded image:**
+        
+        rm ada.jpg
+        
+    
+# Download an object from your bucket
+
+    **Use the gsutil cp command to download the image you stored in your bucket to Cloud Shell:**
+    
+          gsutil cp -r gs://YOUR-BUCKET-NAME/ada.jpg .
+          
+          
 
