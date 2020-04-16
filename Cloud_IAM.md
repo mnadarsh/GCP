@@ -43,3 +43,20 @@ Select Navigation menu > IAM & admin > IAM. You are now in the "IAM & admin" con
 Click +ADD button near the top of the page and explore the project roles associated with Projects by clicking on the "Select a role" dropdown menu:
 
 *You should see Browser, Editor, Owner, and Viewer roles. These four are known as primitive roles in GCP. Primitive roles set project-level permissions and unless otherwise specified, they control access and management to all GCP services.*
+
+
+**roles/viewer**
+  Permissions for read-only actions that do not affect state, such as viewing (but not modifying) existing resources or data.
+  
+**roles/editor** 
+  All viewer permissions, plus permissions for actions that modify state, such as changing existing resources.
+
+**roles/owner**
+  All editor permissions and permissions for the following actions:
+
+  *. Manage roles and permissions for a project and all resources within the project.*
+  *. Set up billing for a project.*
+  
+ **roles/browser (beta)**
+  Read access to browse the hierarchy for a project, including the folder, organization, and Cloud IAM policy. 
+  This role doesn't include  permission to view resources in the project.
