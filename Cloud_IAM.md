@@ -1,1 +1,34 @@
+# Overview
 
+Google Cloud's Identity and Access Management (IAM) service lets you create and manage permissions for GCP resources. Cloud IAM unifies access control for GCP services into a single system and provides a consistent set of operations. In this hands-on lab you learn how to assign a role to a second user and remove assigned roles associated with Cloud IAM. More specifically, you sign in with 2 different sets of credentials to experience how granting and revoking permissions works from GCP Project Owner and Viewer roles.
+
+
+**Setup for two users**
+
+As mentioned earlier, this lab provides two sets of credentials to illustrate IAM policies and what permissions are available for specific roles.
+
+In the panel on the left-hand side of your lab, you see a list of credentials that resembles the following:
+
+**Sign in to GCP Console as the first user**
+
+Click on the Open Google Console button. This opens a new browser tab. If you are asked to Choose an account, click Use another account.
+
+The GCP sign in page opens. A Sign in page opens—copy and paste the Username 1 credential that resembles googlexxxxxx_student@qwiklabs.net into the "Email or phone" field.
+
+Copy the password from the "Connection Details" panel and paste into the Google Sign in password field.
+
+Click Next and then Accept the terms of service. The Google Cloud Platform Console opens. 
+
+Agree to the terms of service and check No for email updates:
+
+**Sign in to GCP Console as the second user**
+
+Click on the Open Google Console button again. A new browser tab opens, if you are asked to Choose an account, click Use another account.
+
+The GCP sign in page opens. Copy and paste the Username 2 credential that resembles googlexxxxxx_student@qwiklabs.net into the Email or phone field.
+
+Copy the password from the Connection Details panel and paste into the Google Sign in password field.
+
+Click Next and then Accept the terms of service. The Google Cloud Platform Console opens. 
+
+Agree to the terms of service and check No for email updates:
