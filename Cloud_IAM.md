@@ -32,3 +32,14 @@ Copy the password from the Connection Details panel and paste into the Google Si
 Click Next and then Accept the terms of service. The Google Cloud Platform Console opens. 
 
 Agree to the terms of service and check No for email updates:
+
+
+# The IAM console and project level roles
+
+Return to the Username 1 GCP Console page.
+
+Select Navigation menu > IAM & admin > IAM. You are now in the "IAM & admin" console.
+
+Click +ADD button near the top of the page and explore the project roles associated with Projects by clicking on the "Select a role" dropdown menu:
+
+*You should see Browser, Editor, Owner, and Viewer roles. These four are known as primitive roles in GCP. Primitive roles set project-level permissions and unless otherwise specified, they control access and management to all GCP services.*
