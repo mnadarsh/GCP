@@ -129,4 +129,27 @@ This hands-on lab shows you how to monitor a Google Compute Engine virtual machi
 
           You've created an alert! While you wait for the system to trigger an alert, 
           create a dashboard and chart, and then check out Cloud logging.
+          
+          
+  # Create a dashboard and chart
+   
+      You can display the metrics collected by Cloud Monitoring in your own charts and dashboards.
+      In this section you create the charts for the lab metrics and a custom dashboard.
       
+      1. In the left menu select Dashboards, and then Create Dashboard.
+      
+      2. Name the dashboard "Cloud monitoring LAMP Qwik Start Dashboard", and then click Confirm.
+      
+      Add the first chart
+      
+            1. Click Add Chart in the top right of the screen.
+      
+            2. Name the chart "CPU Load".
+      
+            3. Click into the Find resource type and metric field and start typing "CPU load", then select CPU Load (1m).
+            
+            4. Set the resource type to "GCE VM Instance".
+            
+      Add the second chart
+      
+
