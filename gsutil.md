@@ -15,6 +15,8 @@ Change access control permissions on objects
 
 Delete a bucket.
 
+## Activate Google Cloud Shell
+
 
    **In Cloud Shell session execute the following command to download sample data for this lab from a git repository:**
 
@@ -82,5 +84,31 @@ Delete a bucket.
    *To confirm files are viewable by the public, open the following link in a new incognito or private browser window,
    replacing <your-bucket-name> with the full name of your bucket, not the environment variable:*
   
-  
+      http://storage.googleapis.com/<your-bucket-name>/endpointslambda/old.txt  
       
+  **Copy with different storage class**
+  
+  *Next, copy a file with Nearline storage class instead of the bucket's default Multi-regional storage class:*
+  
+    gsutil cp -s nearline ghcn/ghcn_on_bq.ipynb gs://${BUCKET}
+      
+  **Check storage classes**
+
+  *Run the following to check the storage classes and view other detailed information about the objects in your bucket:*
+    
+    gsutil ls -Lr gs://${BUCKET} | more
+    
+   *Press the space key to continue viewing the rest of the command's output.
+   You can use Ctrl + c to return to the command line*
+   
+ **Delete your bucket**
+
+*Before deleting a bucket, you must first delete all objects in the bucket. To delete all objects, execute the following command:*
+
+    gsutil rm -rf gs://${BUCKET}/*
+    
+ *Now delete the bucket:*
+ 
+    gsutil rb gs://${BUCKET}
+   
+   
