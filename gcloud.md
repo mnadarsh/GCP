@@ -8,7 +8,17 @@
   
     gcloud auth login `account`
     
-    example: gcloud auth login mn.adarsh@gmail.com
+    example: gcloud auth login abc@gmail.com
+    
+  **To set the active account, run:**
   
+    $ gcloud config set account `ACCOUNT`
+   
+    example: gcloud config set account abc@gmail.com
+    
+  **Your current project is [None].  You can change this setting by running:**
   
+    $ gcloud config set project PROJECT_ID
+    
+     example: gcloud config set project bigquerydevelopement
   
